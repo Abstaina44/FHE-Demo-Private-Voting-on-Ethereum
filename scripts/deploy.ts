@@ -1,14 +1,19 @@
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
 async function main() {
-  const PrivateVote = await ethers.getContractFactory("PrivateVote");
+  const [deployer] = await hre.ethers.getSigners();
+
+  console.log("Deploying with account:", deployer.address);
+
+  const PrivateVote = await hre.ethers.getContractFactory("PrivateVote");
   const privateVote = await PrivateVote.deploy();
-  await privateVote.waitForDeployment();
-  console.log(`✅ PrivateVote deployed at: ${privateVote.target}`);
+
+  await privateVote.deployed();
+
+  console.log("✅ PrivateVote deployed to:", privateVote.address);
 }
 
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
-

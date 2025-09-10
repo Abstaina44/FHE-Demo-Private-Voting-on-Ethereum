@@ -1,6 +1,6 @@
 # 🔐 FHE Demo – Private Voting on Ethereum
 
-A demo project that shows how to build a private voting system on Ethereum using concepts from Fully Homomorphic Encryption (FHE). Instead of exposing raw votes on-chain, voters submit encrypted ballots. The contract aggregates votes without revealing individual choices.
+A demo project that shows how to build  private voting system on Ethereum using concepts from Fully Homomorphic Encryption (FHE). Instead of exposing raw votes on-chain, voters submit encrypted ballots. The contract aggregates votes without revealing individual choices.
 
 This repository is designed for learning and experimentation with Solidity, Foundry, and TypeScript.
 
